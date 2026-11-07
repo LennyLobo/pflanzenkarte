@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2f5d3a" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <title>PflanzenKarte</title>
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="topbar">
+    <span class="brand">PflanzenKarte</span>
+    <span id="count" class="pill"></span>
+    <button id="btn-layer" class="pill" type="button">Karte</button>
+  </div>
+
+  <button id="btn-locate" class="fab-small" type="button" aria-label="Mein Standort">◎</button>
+
+  <div id="bottombar">
+    <button id="btn-list" type="button">Liste</button>
+    <button id="btn-camera" class="primary" type="button">Foto aufnehmen</button>
+    <button id="btn-gallery" type="button">Aus Galerie</button>
+  </div>
+
+  <!-- pin placement mode -->
+  <div id="pinbar" hidden>
+    <div>Karte verschieben, bis das Kreuz auf dem Fundort liegt.</div>
+    <div class="row">
+      <button id="pin-cancel" type="button">Abbrechen</button>
+      <button id="pin-ok" class="primary" type="button">Hier ist der Fund</button>
+    </div>
+  </div>
+  <div id="crosshair" hidden></div>
+
+  <div id="sheet" hidden></div>
+  <div id="toast" hidden></div>
+
+  <input id="in-camera" type="file" accept="image/*" capture="environment" hidden />
+  <input id="in-gallery" type="file" accept="image/jpeg,image/heic,image/heif,image/png,image/webp" multiple hidden />
+  <input id="in-addphoto" type="file" accept="image/*" hidden />
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
